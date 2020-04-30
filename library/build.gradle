@@ -1,0 +1,90 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
+
+        javaCompileOptions {
+
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+        liteav_release {
+            buildConfigField "String", "IP", "\"10.252.2.67\""
+            buildConfigField "String", "PORT", "\":9875/\""
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            debuggable false;
+        }
+        liteav_debug {
+            buildConfigField "String", "IP", "\"10.252.2.68\""
+            buildConfigField "String", "PORT", "\":9877/\""
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            debuggable true;
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    //view
+    //ButterKnife
+    api 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+    api 'com.android.support:multidex:1.0.3'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    api 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    //工具类
+    api 'com.blankj:utilcode:1.13.10'
+    api ('me.jessyan:arms:2.5.0')
+
+    api rootProject.ext.dependencies["progressmanager"]
+    api rootProject.ext.dependencies["retrofit-url-manager"]
+    api rootProject.ext.dependencies["lifecyclemodel"]
+
+    implementation files('libs/netty-all-4.1.32.Final.jar')
+    //ftp
+    implementation 'commons-net:commons-net:3.6'
+    //glide
+
+    implementation(rootProject.ext.dependencies["arms_imageloader_glide"]) {
+        exclude group: 'com.android.support'
+    }
+    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+
+    api rootProject.ext.dependencies["design"]
+    //androideventbus
+    api(rootProject.ext.dependencies["androideventbus"]) {
+        exclude group: 'com.android.support'
+    }
+}

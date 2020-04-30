@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--日期控件-->
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+    <string name="pc_item_detail">详情</string>
+
+    <string name="unknown_error">未知错误</string>
+    <string name="dialog_ok">确定</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_title">提示</string>
+
+    <string name="home_item_tip">成都市某某某科技有限公司会议演讲回放成都市某某某科技有限公司会议演讲回放</string>
+
+    <string name="tip">提示</string>
+
+    <string name="main_home_title">首页</string>
+    <string name="main_live_title">直播</string>
+    <string name="main_mine_title">我的</string>
+    <string name="main_livlive_room_tip">加入展会</string>
+    <string name="main_live_add">加入</string>
+    <string name="main_live_hint">请输入邀请码</string>
+    <string name="main_live_tip1">邀请码获取方式</string>
+    <string name="main_live_tip2">请联系主办方获取或向朋友索取</string>
+    <string name="main_live_top_title">请输入邀请码</string>
+    <string name="main_mine_top_title">我的信息</string>
+    <string name="main_mine_commit">提交</string>
+    <string name="main_mine_username">用户名</string>
+    <string name="main_mine_sex">性别</string>
+    <string name="main_mine_myinfo">我的信息</string>
+    <string name="main_mine_exit">退出账号</string>
+    <string name="live_top_title_live">直播</string>
+    <string name="live_top_title_chatroom">洽谈间</string>
+    <string name="live_small_title1">大厅</string>
+    <string name="live_small_title2">二厅</string>
+    <string name="live_small_title3">副厅</string>
+    <string name="live_room_title">热门洽谈间</string>
+    <string name="live_room_state">接待中...</string>
+    <string name="login_tip">您好，</string>
+    <string name="login_small_tip">欢迎来到密厅。</string>
+    <string name="login_btn">登录</string>
+    <string name="login_username_hint">请输入账号</string>
+    <string name="login_password_hint">请输入密码</string>
+
+</resources>

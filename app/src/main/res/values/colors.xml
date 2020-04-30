@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="txt_color_blue">#3B73E1</color>
+    <color name="txt_color_gray">#7D7D7D</color>
+    <color name="video_time_bg">#46000000</color>
+    <color name="txt_color_transparent_gray">#DBDBDB</color>
+    <color name="txt_live_tip">#3B73E1</color>
+    <color name="banner_indicator">#FDEEE1</color>
+    <color name="live_room_title_txt">#3B3B3B</color>
+    <color name="colorEAEAEA">#EAEAEA</color>
+    <color name="colorF5F5F5">#F5F5F5</color>
+    <color name="colorFF3838">#FF3838</color>
+    <color name="colorDBDBDB">#DBDBDB</color>
+
+</resources>

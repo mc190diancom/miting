@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.heima.tabview.library.TabView
+        android:id="@+id/tabView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:tab_imageViewWidth="20dp"
+        app:tab_imageViewHeight="20dp"
+        app:tab_textViewSize="12sp"
+        app:tab_textViewSelColor="@color/live_bg">
+    </com.heima.tabview.library.TabView>
+</LinearLayout>

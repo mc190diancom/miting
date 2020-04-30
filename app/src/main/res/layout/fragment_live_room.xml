@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/llTing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"></RadioGroup>
+
+    <View
+        android:id="@+id/viewGray"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#F5F5F5" />
+
+    <LinearLayout
+        android:id="@+id/llCompany"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.feidi.template.mvp.ui.view.HideTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#ff3b3b3b"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/llCheckAll"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivCheckAll"
+                android:layout_width="15dp"
+                android:layout_height="10dp"
+                android:src="@drawable/iv_check_all" />
+
+            <TextView
+                android:id="@+id/tvCheckAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="展开"
+                android:textColor="#ff3b3b3b"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/rlVideoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical">
+
+
+        <com.tencent.rtmp.ui.TXCloudVideoView
+            android:id="@+id/trtc_cdn_play_view"
+            android:layout_width="match_parent"
+            android:layout_height="211dp"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/flPortrait"
+            android:layout_width="24dp"
+            android:layout_height="211dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:gravity="bottom">
+
+            <com.feidi.template.mvp.ui.view.PicView
+                android:id="@+id/pvRotationLand"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="bottom"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlTitleLand"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:alpha="0.7"
+            android:background="@color/black"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/top_tb_back_web" />
+
+            <TextView
+                android:id="@+id/tvCompanyLand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="莫德生物医疗科技有限公司的直播间"
+                android:textColor="#ffffffff"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/ivRotation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/top_tb_back_web" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flInputLand"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="93dp"
+            android:layout_marginRight="93dp"
+            android:layout_marginBottom="10dp"
+            android:alpha="0.8"
+            android:background="@drawable/input_land_bg"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="说点什么吧"
+                android:paddingLeft="10dp"
+                android:paddingRight="60dp"
+                android:textColorHint="#A8A8A8"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvSend"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/land_send_btn_bg"
+                android:gravity="center"
+                android:text="发送"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+
+        <com.tencent.qcloud.tim.uikit.modules.chat.ChatLayout
+            android:id="@+id/chat_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="211dp" />
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

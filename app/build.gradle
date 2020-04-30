@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        applicationId "com.feidi.template"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode 1
+        versionName "1.0"
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+        multiDexEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("qh.key")
+            storePassword "1971214"
+            keyAlias "qh"
+            keyPassword "1971214"
+            v2SigningEnabled false
+        }
+        debug {
+            storeFile file("qh.key")
+            storePassword "1971214"
+            keyAlias "qh"
+            keyPassword "1971214"
+            v2SigningEnabled false
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        liteav_release {
+            buildConfigField "String", "IP", "\"10.252.2.67\""
+            buildConfigField "String", "PORT", "\":9875/\""
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    if (buildType.name == inspect_release) {
+                        // 输出apk名称为app_v1.0_2015-xx-xx_xxxx.apk
+                        outputFileName = "直播正式${buildType.name}_${defaultConfig.versionCode}.apk"
+                    }
+                }
+            }
+            debuggable true;
+        }
+        liteav_debug {
+            buildConfigField "String", "IP", "\"10.252.2.68\""
+            buildConfigField "String", "PORT", "\":9877/\""
+            minifyEnabled false
+            //applicationIdSuffix ".test"         // 测试包增加包名后缀
+            signingConfig signingConfigs.debug
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    // 输出apk名称为app_v1.0_2015-xx-xx_xxxx.apk
+                    if (buildType.name == inspect_debug) {
+                        outputFileName = "直播测试_${buildType.name}_${defaultConfig.versionCode}.apk"
+                    }
+                }
+            }
+
+            debuggable true;
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':library')
+    implementation project(':debug')
+    implementation project(':trtcmeetingdemo')
+    implementation project(':login')
+    implementation project(':trtcliveroomdemo')
+   // implementation project(':tim')
+    implementation project(':tuikit')
+    implementation project(':banner')
+    implementation 'com.android.support:appcompat-v7:27.1.0'
+    implementation 'com.github.open-android:FragmentTabhostUtils:0.5.0'
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+}
+

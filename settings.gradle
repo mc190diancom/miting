@@ -1,0 +1,4 @@
+include ':app',':library',':debug',':trtcmeetingdemo',':beauty',':login',':trtcliveroomdemo',"banner",
+
+       // ':tim',
+        ':tuikit'

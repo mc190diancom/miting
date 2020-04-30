@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/flContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rlGrid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="25dp"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/flVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--            <com.tencent.rtmp.ui.TXCloudVideoView-->
+            <!--                android:id="@+id/trtc_cdn_play_view"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:visibility="visible"-->
+            <!--                tools:visibility="visible" />-->
+
+        </FrameLayout>
+
+        <View
+            android:id="@+id/viewBg"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.83"
+            android:visibility="invisible"
+            android:background="#333333"
+            />
+
+        <HorizontalScrollView
+            android:id="@+id/hsVideo"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:fadingEdge="horizontal"
+            android:scrollbars="none"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/llVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rlTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_back"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/ibBack"
+                    android:layout_width="15dp"
+                    android:layout_height="18.5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/finish_live" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/rl_back"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/ibSwitch"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="75dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/grid_video" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#7D7D7D"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:background="#333333"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/ibSpeak"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/mk_open" />
+
+        <ImageButton
+            android:id="@+id/ibVoice"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="51dp"
+            android:background="@drawable/voice_open" />
+
+        <ImageButton
+            android:id="@+id/ibCamera"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="51dp"
+            android:background="@drawable/camera_open" />
+    </LinearLayout>
+</LinearLayout>

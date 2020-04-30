@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 以下内容的 vendor-id、product-id就是USB的vid和pid了-->
+
+    <usb-device
+        product-id="50010"
+        vendor-id="1024" />
+    <usb-device
+        product-id="22353"
+        vendor-id="5251" />
+    <usb-device
+        product-id="21547"
+        vendor-id="1025" />
+</resources>

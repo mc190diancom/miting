@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gray_white">#d3d3d3</color>
+
+    <!--日期控件-->
+    <color name="pickerview_topbar_title">#000000</color>
+    <color name="pickerview_bgColor_overlay">#60000000</color>
+    <color name="title_btn_color">#B2f8f8f8</color>
+    <color name="white">#ffffff</color>
+    <color name="seekbar_color">#ff4c6df8</color>
+    <color name="bg_color">#eeeeee</color>
+    <color name="color333">#333333</color>
+    <color name="colorff41c3d6">#41c3d6</color>
+    <color name="color666">#666666</color>
+    <color name="colorFF3939">#FF3939</color>
+    <color name="divide_color">#dddddd</color>
+    <color name="light_blue">#41C3D6</color>
+    <color name="pop_window">#35ACBD</color>
+    <color name="map_line">#6198FB</color>
+    <color name="address_link">#0000ee</color>
+    <color name="color999">#999999</color>
+    <color name="lucency">#00000000</color>
+    <color name="kong_lujin_color">#15aa36</color>
+    <color name="zhong_lujin_color">#c984ba</color>
+    <color name="gray">#818181</color>
+    <color name="jiean_btn_color">#00a7d9</color>
+    <color name="main_live_bg">#F5F5F5</color>
+    <color name="main_live_gray">#E8E8E8</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="home_text">#525252</color>
+    <color name="live_bg">#3B73E1</color>
+    <color name="color7D7D7D">#7D7D7D</color>
+    <color name="color3B73E1">#3B73E1</color>
+</resources>
